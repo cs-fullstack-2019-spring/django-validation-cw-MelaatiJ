@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entries</title>
+</head>
+<body>
+<h1>All the Cars Listed</h1>
+{% for eachCar in allCars %}
+{{ eachCar.make }}
+{{ eachCar.model }}
+{{ eachCar.year }}
+{{ eachCar.mpg }}
+<hr/>
+{% endfor %}
+<form action="{% url 'congrats' %}">
+    {% csrf_token %}
+    {{ carform }}
+    <button>SUBMIT</button>
+</form>
+</body>
+</html>
+</html>
