@@ -11,7 +11,7 @@ def cars(request):
     carform = CarForm()
     context = {
         "carform": carform,
-        "allCars" : allCars,
+        "allCars": allCars,
     }
 
     return render(request, "carApp/carEntries.html", context)
